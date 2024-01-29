@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,21 @@
 		7E49C7662B67FA62002B9F14 /* ApolloAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 7E49C7652B67FA62002B9F14 /* ApolloAPI */; };
 		7E49C7682B67FA62002B9F14 /* ApolloSQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 7E49C7672B67FA62002B9F14 /* ApolloSQLite */; };
 		7E49C76A2B67FA62002B9F14 /* ApolloTestSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 7E49C7692B67FA62002B9F14 /* ApolloTestSupport */; };
+		7E49C76E2B67FD94002B9F14 /* schema.graphqls in Resources */ = {isa = PBXBuildFile; fileRef = 7E49C76D2B67FD94002B9F14 /* schema.graphqls */; };
+		7E49C7702B67FDDE002B9F14 /* AnimeSearch.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 7E49C76F2B67FDDE002B9F14 /* AnimeSearch.graphql */; };
+		7E49C7722B67FE46002B9F14 /* AnilistAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 7E49C7712B67FE46002B9F14 /* AnilistAPI */; };
+		7E49C7752B67FE69002B9F14 /* GNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E49C7742B67FE69002B9F14 /* GNetworkService.swift */; };
+		7E49C7792B680135002B9F14 /* AnilistAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 7E49C7782B680135002B9F14 /* AnilistAPI */; };
+		7E49C77C2B680305002B9F14 /* MainVC+Controlling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E49C77B2B680305002B9F14 /* MainVC+Controlling.swift */; };
+		7E49C77F2B6803C0002B9F14 /* MainVC+Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E49C77E2B6803C0002B9F14 /* MainVC+Routing.swift */; };
+		7E49C7812B6803D6002B9F14 /* MainVC+Interacting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E49C7802B6803D6002B9F14 /* MainVC+Interacting.swift */; };
+		7E49C7832B68041F002B9F14 /* MainVC+Presenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E49C7822B68041F002B9F14 /* MainVC+Presenting.swift */; };
+		7E49C7852B68044A002B9F14 /* MainVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E49C7842B68044A002B9F14 /* MainVCViewModel.swift */; };
+		7E49C7872B680469002B9F14 /* MainVCInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E49C7862B680469002B9F14 /* MainVCInteractor.swift */; };
+		7E49C7892B680482002B9F14 /* MainVCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E49C7882B680482002B9F14 /* MainVCPresenter.swift */; };
+		7E49C78B2B680492002B9F14 /* MainVCRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E49C78A2B680492002B9F14 /* MainVCRouter.swift */; };
+		7E49C78D2B680645002B9F14 /* MainVCAnimeSearchingWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E49C78C2B680645002B9F14 /* MainVCAnimeSearchingWorker.swift */; };
+		7E49C7902B680801002B9F14 /* AnimeSearchResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E49C78F2B680801002B9F14 /* AnimeSearchResultModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +46,19 @@
 		7E49C7462B67F85A002B9F14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E49C7572B67F978002B9F14 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		7E49C7592B67F98C002B9F14 /* MainScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScene.swift; sourceTree = "<group>"; };
+		7E49C76D2B67FD94002B9F14 /* schema.graphqls */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = schema.graphqls; sourceTree = "<group>"; };
+		7E49C76F2B67FDDE002B9F14 /* AnimeSearch.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = AnimeSearch.graphql; sourceTree = "<group>"; };
+		7E49C7742B67FE69002B9F14 /* GNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNetworkService.swift; sourceTree = "<group>"; };
+		7E49C77B2B680305002B9F14 /* MainVC+Controlling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVC+Controlling.swift"; sourceTree = "<group>"; };
+		7E49C77E2B6803C0002B9F14 /* MainVC+Routing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVC+Routing.swift"; sourceTree = "<group>"; };
+		7E49C7802B6803D6002B9F14 /* MainVC+Interacting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVC+Interacting.swift"; sourceTree = "<group>"; };
+		7E49C7822B68041F002B9F14 /* MainVC+Presenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVC+Presenting.swift"; sourceTree = "<group>"; };
+		7E49C7842B68044A002B9F14 /* MainVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCViewModel.swift; sourceTree = "<group>"; };
+		7E49C7862B680469002B9F14 /* MainVCInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCInteractor.swift; sourceTree = "<group>"; };
+		7E49C7882B680482002B9F14 /* MainVCPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCPresenter.swift; sourceTree = "<group>"; };
+		7E49C78A2B680492002B9F14 /* MainVCRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCRouter.swift; sourceTree = "<group>"; };
+		7E49C78C2B680645002B9F14 /* MainVCAnimeSearchingWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCAnimeSearchingWorker.swift; sourceTree = "<group>"; };
+		7E49C78F2B680801002B9F14 /* AnimeSearchResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeSearchResultModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E49C7792B680135002B9F14 /* AnilistAPI in Frameworks */,
+				7E49C7722B67FE46002B9F14 /* AnilistAPI in Frameworks */,
 				7E49C75F2B67FA1B002B9F14 /* SDWebImageMapKit in Frameworks */,
 				7E49C76A2B67FA62002B9F14 /* ApolloTestSupport in Frameworks */,
 				7E49C7622B67FA62002B9F14 /* Apollo in Frameworks */,
@@ -70,6 +100,10 @@
 		7E49C7372B67F858002B9F14 /* Anilist */ = {
 			isa = PBXGroup;
 			children = (
+				7E49C78E2B6807E3002B9F14 /* Model */,
+				7E49C76C2B67FD8C002B9F14 /* graphql */,
+				7E49C7762B680086002B9F14 /* Worker */,
+				7E49C7732B67FE52002B9F14 /* Network Service */,
 				7E49C74F2B67F8B8002B9F14 /* Source */,
 				7E49C74E2B67F8AC002B9F14 /* Assets */,
 				7E49C74D2B67F8A5002B9F14 /* Supporting */,
@@ -107,6 +141,7 @@
 		7E49C7502B67F8C2002B9F14 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				7E49C77A2B6802E7002B9F14 /* Protocol */,
 				7E49C7562B67F8E9002B9F14 /* Router */,
 				7E49C7552B67F8E2002B9F14 /* ViewModel */,
 				7E49C7542B67F8DD002B9F14 /* Presenter */,
@@ -136,6 +171,7 @@
 		7E49C7532B67F8D7002B9F14 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				7E49C7862B680469002B9F14 /* MainVCInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -143,6 +179,7 @@
 		7E49C7542B67F8DD002B9F14 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				7E49C7882B680482002B9F14 /* MainVCPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -150,6 +187,7 @@
 		7E49C7552B67F8E2002B9F14 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				7E49C7842B68044A002B9F14 /* MainVCViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -157,8 +195,53 @@
 		7E49C7562B67F8E9002B9F14 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				7E49C78A2B680492002B9F14 /* MainVCRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		7E49C76C2B67FD8C002B9F14 /* graphql */ = {
+			isa = PBXGroup;
+			children = (
+				7E49C76D2B67FD94002B9F14 /* schema.graphqls */,
+				7E49C76F2B67FDDE002B9F14 /* AnimeSearch.graphql */,
+			);
+			path = graphql;
+			sourceTree = "<group>";
+		};
+		7E49C7732B67FE52002B9F14 /* Network Service */ = {
+			isa = PBXGroup;
+			children = (
+				7E49C7742B67FE69002B9F14 /* GNetworkService.swift */,
+			);
+			path = "Network Service";
+			sourceTree = "<group>";
+		};
+		7E49C7762B680086002B9F14 /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				7E49C78C2B680645002B9F14 /* MainVCAnimeSearchingWorker.swift */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
+		7E49C77A2B6802E7002B9F14 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				7E49C77B2B680305002B9F14 /* MainVC+Controlling.swift */,
+				7E49C77E2B6803C0002B9F14 /* MainVC+Routing.swift */,
+				7E49C7802B6803D6002B9F14 /* MainVC+Interacting.swift */,
+				7E49C7822B68041F002B9F14 /* MainVC+Presenting.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		7E49C78E2B6807E3002B9F14 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7E49C78F2B680801002B9F14 /* AnimeSearchResultModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +268,8 @@
 				7E49C7652B67FA62002B9F14 /* ApolloAPI */,
 				7E49C7672B67FA62002B9F14 /* ApolloSQLite */,
 				7E49C7692B67FA62002B9F14 /* ApolloTestSupport */,
+				7E49C7712B67FE46002B9F14 /* AnilistAPI */,
+				7E49C7782B680135002B9F14 /* AnilistAPI */,
 			);
 			productName = Anilist;
 			productReference = 7E49C7352B67F858002B9F14 /* Anilist.app */;
@@ -217,6 +302,7 @@
 			packageReferences = (
 				7E49C75B2B67FA1B002B9F14 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				7E49C7602B67FA62002B9F14 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				7E49C7772B680135002B9F14 /* XCLocalSwiftPackageReference "AnilistAPI" */,
 			);
 			productRefGroup = 7E49C7362B67F858002B9F14 /* Products */;
 			projectDirPath = "";
@@ -232,7 +318,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E49C7702B67FDDE002B9F14 /* AnimeSearch.graphql in Resources */,
 				7E49C7452B67F85A002B9F14 /* LaunchScreen.storyboard in Resources */,
+				7E49C76E2B67FD94002B9F14 /* schema.graphqls in Resources */,
 				7E49C7422B67F85A002B9F14 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,10 +332,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E49C7902B680801002B9F14 /* AnimeSearchResultModel.swift in Sources */,
 				7E49C7392B67F858002B9F14 /* AppDelegate.swift in Sources */,
+				7E49C77F2B6803C0002B9F14 /* MainVC+Routing.swift in Sources */,
+				7E49C7872B680469002B9F14 /* MainVCInteractor.swift in Sources */,
 				7E49C75A2B67F98C002B9F14 /* MainScene.swift in Sources */,
+				7E49C7752B67FE69002B9F14 /* GNetworkService.swift in Sources */,
+				7E49C7832B68041F002B9F14 /* MainVC+Presenting.swift in Sources */,
+				7E49C7892B680482002B9F14 /* MainVCPresenter.swift in Sources */,
+				7E49C7812B6803D6002B9F14 /* MainVC+Interacting.swift in Sources */,
+				7E49C78D2B680645002B9F14 /* MainVCAnimeSearchingWorker.swift in Sources */,
+				7E49C77C2B680305002B9F14 /* MainVC+Controlling.swift in Sources */,
 				7E49C7582B67F978002B9F14 /* MainVC.swift in Sources */,
+				7E49C7852B68044A002B9F14 /* MainVCViewModel.swift in Sources */,
 				7E49C73B2B67F858002B9F14 /* SceneDelegate.swift in Sources */,
+				7E49C78B2B680492002B9F14 /* MainVCRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,6 +558,13 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		7E49C7772B680135002B9F14 /* XCLocalSwiftPackageReference "AnilistAPI" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = AnilistAPI;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
 		7E49C75B2B67FA1B002B9F14 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -513,6 +619,15 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7E49C7602B67FA62002B9F14 /* XCRemoteSwiftPackageReference "apollo-ios" */;
 			productName = ApolloTestSupport;
+		};
+		7E49C7712B67FE46002B9F14 /* AnilistAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E49C7602B67FA62002B9F14 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = AnilistAPI;
+		};
+		7E49C7782B680135002B9F14 /* AnilistAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AnilistAPI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

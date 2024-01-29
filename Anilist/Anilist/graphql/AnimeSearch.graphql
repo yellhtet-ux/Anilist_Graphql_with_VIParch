@@ -1,0 +1,35 @@
+query    Page($page: Int, $perPage: Int,$searchTerm:String) {
+    Page(page:$page, perPage:$perPage) {
+    pageInfo {
+      currentPage
+      perPage
+      lastPage
+      total
+      hasNextPage
+    }
+    media(search:$searchTerm) {
+    id
+    title {
+      romaji
+      english
+      native
+      userPreferred
+    }
+    type
+    format
+    episodes
+    description
+    countryOfOrigin
+    startDate {
+      day
+      month
+      year
+    }
+    endDate {
+      day
+      month
+      year
+    }
+  }
+    }
+}
