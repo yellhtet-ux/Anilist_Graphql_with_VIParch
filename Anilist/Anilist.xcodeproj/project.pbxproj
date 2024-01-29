@@ -9,21 +9,28 @@
 /* Begin PBXBuildFile section */
 		7E49C7392B67F858002B9F14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E49C7382B67F858002B9F14 /* AppDelegate.swift */; };
 		7E49C73B2B67F858002B9F14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E49C73A2B67F858002B9F14 /* SceneDelegate.swift */; };
-		7E49C73D2B67F858002B9F14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E49C73C2B67F858002B9F14 /* ViewController.swift */; };
-		7E49C7402B67F858002B9F14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E49C73E2B67F858002B9F14 /* Main.storyboard */; };
 		7E49C7422B67F85A002B9F14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E49C7412B67F85A002B9F14 /* Assets.xcassets */; };
 		7E49C7452B67F85A002B9F14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E49C7432B67F85A002B9F14 /* LaunchScreen.storyboard */; };
+		7E49C7582B67F978002B9F14 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E49C7572B67F978002B9F14 /* MainVC.swift */; };
+		7E49C75A2B67F98C002B9F14 /* MainScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E49C7592B67F98C002B9F14 /* MainScene.swift */; };
+		7E49C75D2B67FA1B002B9F14 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 7E49C75C2B67FA1B002B9F14 /* SDWebImage */; };
+		7E49C75F2B67FA1B002B9F14 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7E49C75E2B67FA1B002B9F14 /* SDWebImageMapKit */; };
+		7E49C7622B67FA62002B9F14 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 7E49C7612B67FA62002B9F14 /* Apollo */; };
+		7E49C7642B67FA62002B9F14 /* Apollo-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 7E49C7632B67FA62002B9F14 /* Apollo-Dynamic */; };
+		7E49C7662B67FA62002B9F14 /* ApolloAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 7E49C7652B67FA62002B9F14 /* ApolloAPI */; };
+		7E49C7682B67FA62002B9F14 /* ApolloSQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 7E49C7672B67FA62002B9F14 /* ApolloSQLite */; };
+		7E49C76A2B67FA62002B9F14 /* ApolloTestSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 7E49C7692B67FA62002B9F14 /* ApolloTestSupport */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7E49C7352B67F858002B9F14 /* Anilist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Anilist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E49C7382B67F858002B9F14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E49C73A2B67F858002B9F14 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7E49C73C2B67F858002B9F14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7E49C73F2B67F858002B9F14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7E49C7412B67F85A002B9F14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E49C7442B67F85A002B9F14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E49C7462B67F85A002B9F14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E49C7572B67F978002B9F14 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		7E49C7592B67F98C002B9F14 /* MainScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E49C75F2B67FA1B002B9F14 /* SDWebImageMapKit in Frameworks */,
+				7E49C76A2B67FA62002B9F14 /* ApolloTestSupport in Frameworks */,
+				7E49C7622B67FA62002B9F14 /* Apollo in Frameworks */,
+				7E49C75D2B67FA1B002B9F14 /* SDWebImage in Frameworks */,
+				7E49C7642B67FA62002B9F14 /* Apollo-Dynamic in Frameworks */,
+				7E49C7662B67FA62002B9F14 /* ApolloAPI in Frameworks */,
+				7E49C7682B67FA62002B9F14 /* ApolloSQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +70,95 @@
 		7E49C7372B67F858002B9F14 /* Anilist */ = {
 			isa = PBXGroup;
 			children = (
-				7E49C7382B67F858002B9F14 /* AppDelegate.swift */,
-				7E49C73A2B67F858002B9F14 /* SceneDelegate.swift */,
-				7E49C73C2B67F858002B9F14 /* ViewController.swift */,
-				7E49C73E2B67F858002B9F14 /* Main.storyboard */,
-				7E49C7412B67F85A002B9F14 /* Assets.xcassets */,
-				7E49C7432B67F85A002B9F14 /* LaunchScreen.storyboard */,
+				7E49C74F2B67F8B8002B9F14 /* Source */,
+				7E49C74E2B67F8AC002B9F14 /* Assets */,
+				7E49C74D2B67F8A5002B9F14 /* Supporting */,
 				7E49C7462B67F85A002B9F14 /* Info.plist */,
 			);
 			path = Anilist;
+			sourceTree = "<group>";
+		};
+		7E49C74D2B67F8A5002B9F14 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				7E49C7432B67F85A002B9F14 /* LaunchScreen.storyboard */,
+				7E49C7382B67F858002B9F14 /* AppDelegate.swift */,
+				7E49C73A2B67F858002B9F14 /* SceneDelegate.swift */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		7E49C74E2B67F8AC002B9F14 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				7E49C7412B67F85A002B9F14 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		7E49C74F2B67F8B8002B9F14 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				7E49C7502B67F8C2002B9F14 /* Main */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		7E49C7502B67F8C2002B9F14 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7E49C7562B67F8E9002B9F14 /* Router */,
+				7E49C7552B67F8E2002B9F14 /* ViewModel */,
+				7E49C7542B67F8DD002B9F14 /* Presenter */,
+				7E49C7532B67F8D7002B9F14 /* Interactor */,
+				7E49C7522B67F8D2002B9F14 /* View */,
+				7E49C7512B67F8CA002B9F14 /* Scene */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		7E49C7512B67F8CA002B9F14 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				7E49C7592B67F98C002B9F14 /* MainScene.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		7E49C7522B67F8D2002B9F14 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7E49C7572B67F978002B9F14 /* MainVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7E49C7532B67F8D7002B9F14 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		7E49C7542B67F8DD002B9F14 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		7E49C7552B67F8E2002B9F14 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7E49C7562B67F8E9002B9F14 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +177,15 @@
 			dependencies = (
 			);
 			name = Anilist;
+			packageProductDependencies = (
+				7E49C75C2B67FA1B002B9F14 /* SDWebImage */,
+				7E49C75E2B67FA1B002B9F14 /* SDWebImageMapKit */,
+				7E49C7612B67FA62002B9F14 /* Apollo */,
+				7E49C7632B67FA62002B9F14 /* Apollo-Dynamic */,
+				7E49C7652B67FA62002B9F14 /* ApolloAPI */,
+				7E49C7672B67FA62002B9F14 /* ApolloSQLite */,
+				7E49C7692B67FA62002B9F14 /* ApolloTestSupport */,
+			);
 			productName = Anilist;
 			productReference = 7E49C7352B67F858002B9F14 /* Anilist.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +214,10 @@
 				Base,
 			);
 			mainGroup = 7E49C72C2B67F858002B9F14;
+			packageReferences = (
+				7E49C75B2B67FA1B002B9F14 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				7E49C7602B67FA62002B9F14 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+			);
 			productRefGroup = 7E49C7362B67F858002B9F14 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +234,6 @@
 			files = (
 				7E49C7452B67F85A002B9F14 /* LaunchScreen.storyboard in Resources */,
 				7E49C7422B67F85A002B9F14 /* Assets.xcassets in Resources */,
-				7E49C7402B67F858002B9F14 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +244,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E49C73D2B67F858002B9F14 /* ViewController.swift in Sources */,
 				7E49C7392B67F858002B9F14 /* AppDelegate.swift in Sources */,
+				7E49C75A2B67F98C002B9F14 /* MainScene.swift in Sources */,
+				7E49C7582B67F978002B9F14 /* MainVC.swift in Sources */,
 				7E49C73B2B67F858002B9F14 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +254,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7E49C73E2B67F858002B9F14 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7E49C73F2B67F858002B9F14 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7E49C7432B67F85A002B9F14 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -296,7 +395,6 @@
 				INFOPLIST_FILE = Anilist/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -323,7 +421,6 @@
 				INFOPLIST_FILE = Anilist/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -361,6 +458,63 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7E49C75B2B67FA1B002B9F14 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.18.10;
+			};
+		};
+		7E49C7602B67FA62002B9F14 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.8.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7E49C75C2B67FA1B002B9F14 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E49C75B2B67FA1B002B9F14 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		7E49C75E2B67FA1B002B9F14 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E49C75B2B67FA1B002B9F14 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+		7E49C7612B67FA62002B9F14 /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E49C7602B67FA62002B9F14 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+		7E49C7632B67FA62002B9F14 /* Apollo-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E49C7602B67FA62002B9F14 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = "Apollo-Dynamic";
+		};
+		7E49C7652B67FA62002B9F14 /* ApolloAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E49C7602B67FA62002B9F14 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloAPI;
+		};
+		7E49C7672B67FA62002B9F14 /* ApolloSQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E49C7602B67FA62002B9F14 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloSQLite;
+		};
+		7E49C7692B67FA62002B9F14 /* ApolloTestSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E49C7602B67FA62002B9F14 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloTestSupport;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7E49C72D2B67F858002B9F14 /* Project object */;
 }
