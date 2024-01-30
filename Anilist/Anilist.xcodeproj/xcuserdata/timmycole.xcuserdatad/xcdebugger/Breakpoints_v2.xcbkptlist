@@ -3,4 +3,54 @@
    uuid = "A22D417D-40CD-4AC3-B480-AE34A50A8003"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CCFF2AA2-74F1-4716-B1E9-0038C1978421"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Anilist/Source/Main/View/MainVC+Delegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "tableView(_:willDisplay:forRowAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CCFF2AA2-74F1-4716-B1E9-0038C1978421 - 5672919774c45fa9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Anilist.MainVC.tableView(_: __C.UITableView, willDisplay: __C.UITableViewCell, forRowAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "Anilist"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timmycole/Not%20Desktop/Anilist_Graphql_with_VIParch/Anilist/Anilist/Source/Main/View/MainVC+Delegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "712">
+               </Location>
+               <Location
+                  uuid = "CCFF2AA2-74F1-4716-B1E9-0038C1978421 - 5672919774c45fa9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Anilist.MainVC.tableView(_: __C.UITableView, willDisplay: __C.UITableViewCell, forRowAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "Anilist"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timmycole/Not%20Desktop/Anilist_Graphql_with_VIParch/Anilist/Anilist/Source/Main/View/MainVC+Delegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "672">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

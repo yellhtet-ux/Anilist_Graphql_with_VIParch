@@ -21,9 +21,9 @@ extension MainVCInteractor : MainVCAnimeSearchingWorkerDelegate {
     func worker(_ worker: AnimeSearchingWorking, resultHandler: Result<AnimeSearchResultModel, GAPIError>) {
         switch resultHandler {
         case .success(let data):
-            presenter?.present(.getSearchAnimeData(data))
+            presenter?.present(data)
         case .failure(let error):
-            presenter?.present(.getSearchAnimeError(error))
+            presenter?.presentError(error)
         }
     }
 }

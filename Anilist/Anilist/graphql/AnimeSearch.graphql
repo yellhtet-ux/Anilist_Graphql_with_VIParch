@@ -1,5 +1,5 @@
-query    Page($page: Int, $perPage: Int,$searchTerm:String) {
-    Page(page:$page, perPage:$perPage) {
+query Page($page: Int, $perPage: Int, $searchTerm: String) {
+  Page(page: $page, perPage: $perPage) {
     pageInfo {
       currentPage
       perPage
@@ -7,29 +7,36 @@ query    Page($page: Int, $perPage: Int,$searchTerm:String) {
       total
       hasNextPage
     }
-    media(search:$searchTerm) {
-    id
-    title {
-      romaji
-      english
-      native
-      userPreferred
-    }
-    type
-    format
-    episodes
-    description
-    countryOfOrigin
-    startDate {
-      day
-      month
-      year
-    }
-    endDate {
-      day
-      month
-      year
+    media(search: $searchTerm) {
+      id
+      title {
+        romaji
+        english
+        native
+        userPreferred
+      }
+      type
+      format
+      episodes
+        coverImage {
+        large
+        extraLarge
+        medium
+        color
+      }
+      description
+      countryOfOrigin
+      startDate {
+        day
+        month
+        year
+      }
+      endDate {
+        day
+        month
+        year
+      }
     }
   }
-    }
 }
+

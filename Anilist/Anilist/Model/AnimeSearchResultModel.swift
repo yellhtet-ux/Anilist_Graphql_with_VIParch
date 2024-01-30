@@ -33,8 +33,9 @@ struct Media {
     let countryOfOrigin: String?
     let startDate: FuzzyStartDate?
     let endData: FuzzyEndDate?
+    let coverImage: CoverImage?
     
-    init(id: Int?, title: Title?, type: String?, format: String?, episodes: Int?, description: String?, countryOfOrigin: String?, startDate: FuzzyStartDate?, endData: FuzzyEndDate?) {
+    init(id: Int?, title: Title?, type: String?, format: String?, episodes: Int?, description: String?, countryOfOrigin: String?, startDate: FuzzyStartDate?, endData: FuzzyEndDate?,coverImage: CoverImage?) {
         self.id = id
         self.title = title
         self.type = type
@@ -44,6 +45,7 @@ struct Media {
         self.countryOfOrigin = countryOfOrigin
         self.startDate = startDate
         self.endData = endData
+        self.coverImage = coverImage
     }
     
     init (_ data: PageQuery.Data.Page.Medium?) {
@@ -56,6 +58,7 @@ struct Media {
         self.countryOfOrigin = data?.countryOfOrigin
         self.startDate = FuzzyStartDate(data?.startDate)
         self.endData = FuzzyEndDate(data?.endDate)
+        self.coverImage = CoverImage(data?.coverImage)
     } 
 }
 
@@ -113,6 +116,27 @@ struct FuzzyEndDate {
         self.day = data?.day
         self.month = data?.month
         self.year = data?.year
+    }
+}
+
+struct CoverImage {
+    let large: String?
+    let extraLarge: String?
+    let color: String?
+    let medium: String?
+    
+    init(large: String?, extraLarge: String?, color: String?, medium: String?) {
+        self.large = large
+        self.extraLarge = extraLarge
+        self.color = color
+        self.medium = medium
+    }
+    
+    init (_ data: PageQuery.Data.Page.Medium.CoverImage?) {
+        self.large = data?.large
+        self.color = data?.color
+        self.extraLarge = data?.extraLarge
+        self.medium = data?.medium
     }
 }
 

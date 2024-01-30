@@ -29,12 +29,16 @@ class MainVCAnimeSearchingWorker : AnimeSearchingWorking {
         networkService?.fetcher(query: query, completionHandler: {[unowned self] result in
             switch result {
             case .success(let successData):
-                if let data = successData.page {
-                    let animeSearchedModel = AnimeSearchResultModel(data)
-                    self.delegate?.worker(self, resultHandler: .success(animeSearchedModel))
+                DispatchQueue.main.async {
+                    if let data = successData.page {
+                        let animeSearchedModel = AnimeSearchResultModel(data)
+                        self.delegate?.worker(self, resultHandler: .success(animeSearchedModel))
+                    }
                 }
             case .failure(let failureData):
-                self.delegate?.worker(self, resultHandler: .failure(failureData))
+                DispatchQueue.main.async {
+                    self.delegate?.worker(self, resultHandler: .failure(failureData))
+                }
             }
         })
     }

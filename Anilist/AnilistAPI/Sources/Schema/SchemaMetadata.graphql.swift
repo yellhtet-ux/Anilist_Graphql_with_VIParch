@@ -27,6 +27,7 @@ public enum SchemaMetadata: ApolloAPI.SchemaMetadata {
     case "PageInfo": return AnilistAPI.Objects.PageInfo
     case "Media": return AnilistAPI.Objects.Media
     case "MediaTitle": return AnilistAPI.Objects.MediaTitle
+    case "MediaCoverImage": return AnilistAPI.Objects.MediaCoverImage
     case "FuzzyDate": return AnilistAPI.Objects.FuzzyDate
     default: return nil
     }

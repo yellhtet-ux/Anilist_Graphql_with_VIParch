@@ -15,7 +15,7 @@ class GNetworkService {
     private(set) lazy var apollo = ApolloClient(url: URL(string: "https://graphql.anilist.co")!)
     
     func fetcher <Query:GraphQLQuery>(query: Query, completionHandler: @escaping (Result<Query.Data,GAPIError>) -> Void ) {
-        apollo.fetch(query: query) { [unowned self] result in
+        apollo.fetch(query: query) { result in
             switch result {
             case let .success(data):
                 if let resultData = data.data {

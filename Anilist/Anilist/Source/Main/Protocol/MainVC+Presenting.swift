@@ -10,5 +10,6 @@ import Foundation
 protocol MainVCPresenting {
     var viewController : MainVCControlling? {get set}
     
-    func present(_ state: MainVC.State) 
+    func present(_ animeData: AnimeSearchResultModel)
+    func presentError(_ error: GAPIError)
 }

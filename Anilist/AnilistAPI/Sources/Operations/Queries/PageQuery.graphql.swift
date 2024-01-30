@@ -7,7 +7,7 @@ public class PageQuery: GraphQLQuery {
   public static let operationName: String = "Page"
   public static let operationDocument: ApolloAPI.OperationDocument = .init(
     definition: .init(
-      #"query Page($page: Int, $perPage: Int, $searchTerm: String) { Page(page: $page, perPage: $perPage) { __typename pageInfo { __typename currentPage perPage lastPage total hasNextPage } media(search: $searchTerm) { __typename id title { __typename romaji english native userPreferred } type format episodes description countryOfOrigin startDate { __typename day month year } endDate { __typename day month year } } } }"#
+      #"query Page($page: Int, $perPage: Int, $searchTerm: String) { Page(page: $page, perPage: $perPage) { __typename pageInfo { __typename currentPage perPage lastPage total hasNextPage } media(search: $searchTerm) { __typename id title { __typename romaji english native userPreferred } type format episodes coverImage { __typename large extraLarge medium color } description countryOfOrigin startDate { __typename day month year } endDate { __typename day month year } } } }"#
     ))
 
   public var page: GraphQLNullable<Int>
@@ -106,6 +106,7 @@ public class PageQuery: GraphQLQuery {
           .field("type", GraphQLEnum<AnilistAPI.MediaType>?.self),
           .field("format", GraphQLEnum<AnilistAPI.MediaFormat>?.self),
           .field("episodes", Int?.self),
+          .field("coverImage", CoverImage?.self),
           .field("description", String?.self),
           .field("countryOfOrigin", AnilistAPI.CountryCode?.self),
           .field("startDate", StartDate?.self),
@@ -122,6 +123,8 @@ public class PageQuery: GraphQLQuery {
         public var format: GraphQLEnum<AnilistAPI.MediaFormat>? { __data["format"] }
         /// The amount of episodes the anime has when complete
         public var episodes: Int? { __data["episodes"] }
+        /// The cover images of the media
+        public var coverImage: CoverImage? { __data["coverImage"] }
         /// Short description of the media's story and characters
         public var description: String? { __data["description"] }
         /// Where the media was created. (ISO 3166-1 alpha-2)
@@ -155,6 +158,32 @@ public class PageQuery: GraphQLQuery {
           public var native: String? { __data["native"] }
           /// The currently authenticated users preferred title language. Default romaji for non-authenticated
           public var userPreferred: String? { __data["userPreferred"] }
+        }
+
+        /// Page.Medium.CoverImage
+        ///
+        /// Parent Type: `MediaCoverImage`
+        public struct CoverImage: AnilistAPI.SelectionSet {
+          public let __data: DataDict
+          public init(_dataDict: DataDict) { __data = _dataDict }
+
+          public static var __parentType: ApolloAPI.ParentType { AnilistAPI.Objects.MediaCoverImage }
+          public static var __selections: [ApolloAPI.Selection] { [
+            .field("__typename", String.self),
+            .field("large", String?.self),
+            .field("extraLarge", String?.self),
+            .field("medium", String?.self),
+            .field("color", String?.self),
+          ] }
+
+          /// The cover image url of the media at a large size
+          public var large: String? { __data["large"] }
+          /// The cover image url of the media at its largest size. If this size isn't available, large will be provided instead.
+          public var extraLarge: String? { __data["extraLarge"] }
+          /// The cover image url of the media at medium size
+          public var medium: String? { __data["medium"] }
+          /// Average #hex color of cover image
+          public var color: String? { __data["color"] }
         }
 
         /// Page.Medium.StartDate
