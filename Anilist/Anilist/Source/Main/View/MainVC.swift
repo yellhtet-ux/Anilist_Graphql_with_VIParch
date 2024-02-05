@@ -34,6 +34,15 @@ class MainVC: UIViewController {
         return button
     }()
     
+    let errorLabel : UILabel = {
+       let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .white
+        label.font = UIFont.systemFont(ofSize: 13)
+        label.numberOfLines = 1
+        return label    
+    }()
+    
     let animeTableView : UITableView = {
        let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -56,11 +65,21 @@ extension MainVC : MainVCControlling {
         case let .getSearchAnimeData(animeData):
             guard let media = animeData.media else {return}
             guard let metaData = animeData.Page else {return}
-            self.viewModel?.media.append(contentsOf: media)
-            self.viewModel?.metaData = metaData
-            self.animeTableView.reloadData()
+            if media.isEmpty {
+                self.errorLabel.isHidden = false
+                self.errorLabel.text = "There's no Data for your Keywords"
+                self.animeTableView.isHidden = true
+            }else {
+                self.viewModel?.media.append(contentsOf: media)
+                self.viewModel?.totalPages = metaData.total ?? 0
+                self.animeTableView.isHidden = false
+                self.errorLabel.isHidden = true
+                self.animeTableView.reloadData()
+            }
         case let .getSearchAnimeError(resultError):
             self.viewModel?.errorMessage = resultError
+            self.errorLabel.text = viewModel?.errorMessage
+            animeTableView.isHidden = true 
         }
     }
 }

@@ -46,6 +46,11 @@
 		7E6436532B693AC5007DBAE7 /* ApolloAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 7E6436522B693AC5007DBAE7 /* ApolloAPI */; };
 		7E6436552B693AC5007DBAE7 /* ApolloSQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 7E6436542B693AC5007DBAE7 /* ApolloSQLite */; };
 		7E6436572B693AC5007DBAE7 /* ApolloTestSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 7E6436562B693AC5007DBAE7 /* ApolloTestSupport */; };
+		7EB174812B7129950075C735 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 7EB174802B7129950075C735 /* RxBlocking */; };
+		7EB174832B7129950075C735 /* RxBlocking-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 7EB174822B7129950075C735 /* RxBlocking-Dynamic */; };
+		7EB174852B7129950075C735 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 7EB174842B7129950075C735 /* RxCocoa */; };
+		7EB174872B7129950075C735 /* RxCocoa-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 7EB174862B7129950075C735 /* RxCocoa-Dynamic */; };
+		7EB174892B7129950075C735 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 7EB174882B7129950075C735 /* RxRelay */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,9 +92,14 @@
 				7E6436572B693AC5007DBAE7 /* ApolloTestSupport in Frameworks */,
 				7E6436552B693AC5007DBAE7 /* ApolloSQLite in Frameworks */,
 				7E49C7792B680135002B9F14 /* AnilistAPI in Frameworks */,
+				7EB174892B7129950075C735 /* RxRelay in Frameworks */,
+				7EB174872B7129950075C735 /* RxCocoa-Dynamic in Frameworks */,
+				7EB174812B7129950075C735 /* RxBlocking in Frameworks */,
 				7E49C75F2B67FA1B002B9F14 /* SDWebImageMapKit in Frameworks */,
 				7E49C76A2B67FA62002B9F14 /* ApolloTestSupport in Frameworks */,
+				7EB174832B7129950075C735 /* RxBlocking-Dynamic in Frameworks */,
 				7E49C7622B67FA62002B9F14 /* Apollo in Frameworks */,
+				7EB174852B7129950075C735 /* RxCocoa in Frameworks */,
 				7E64364F2B693AC5007DBAE7 /* Apollo in Frameworks */,
 				7E6436532B693AC5007DBAE7 /* ApolloAPI in Frameworks */,
 				7E49C75D2B67FA1B002B9F14 /* SDWebImage in Frameworks */,
@@ -327,6 +337,11 @@
 				7E6436522B693AC5007DBAE7 /* ApolloAPI */,
 				7E6436542B693AC5007DBAE7 /* ApolloSQLite */,
 				7E6436562B693AC5007DBAE7 /* ApolloTestSupport */,
+				7EB174802B7129950075C735 /* RxBlocking */,
+				7EB174822B7129950075C735 /* RxBlocking-Dynamic */,
+				7EB174842B7129950075C735 /* RxCocoa */,
+				7EB174862B7129950075C735 /* RxCocoa-Dynamic */,
+				7EB174882B7129950075C735 /* RxRelay */,
 			);
 			productName = Anilist;
 			productReference = 7E49C7352B67F858002B9F14 /* Anilist.app */;
@@ -360,6 +375,7 @@
 				7E49C75B2B67FA1B002B9F14 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				7E49C7602B67FA62002B9F14 /* XCRemoteSwiftPackageReference "apollo-ios" */,
 				7E64364B2B693A52007DBAE7 /* XCLocalSwiftPackageReference "AnilistAPI" */,
+				7EB1747F2B7129950075C735 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 7E49C7362B67F858002B9F14 /* Products */;
 			projectDirPath = "";
@@ -645,6 +661,14 @@
 				minimumVersion = 1.8.0;
 			};
 		};
+		7EB1747F2B7129950075C735 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.6.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -715,6 +739,31 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7E49C7602B67FA62002B9F14 /* XCRemoteSwiftPackageReference "apollo-ios" */;
 			productName = ApolloTestSupport;
+		};
+		7EB174802B7129950075C735 /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7EB1747F2B7129950075C735 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		7EB174822B7129950075C735 /* RxBlocking-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7EB1747F2B7129950075C735 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxBlocking-Dynamic";
+		};
+		7EB174842B7129950075C735 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7EB1747F2B7129950075C735 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		7EB174862B7129950075C735 /* RxCocoa-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7EB1747F2B7129950075C735 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxCocoa-Dynamic";
+		};
+		7EB174882B7129950075C735 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7EB1747F2B7129950075C735 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

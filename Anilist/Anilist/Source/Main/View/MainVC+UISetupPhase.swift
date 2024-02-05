@@ -14,16 +14,14 @@ extension MainVC  {
          let margin = view.layoutMarginsGuide
         searchStackViewSetUp (margin: margin)  
         animeTableViewSetUp(margin: margin)
+        errorMessageSetUp()
         searchButtonSetUp()
     }
     
     func paginationSetUp () {
-        if let hasNextPage = viewModel?.metaData?.hasNextPage {
-            if hasNextPage {
+        if let totalPages = viewModel?.totalPages {
+            if totalPages >= viewModel?.currentPage ?? 0 {
                 viewModel?.currentPage += 1
-                interactor?.searchAnime(viewModel?.currentPage ?? 0, viewModel?.perPage ?? 0, searchTerm: viewModel?.searchTerm ?? "")
-            }else {
-                viewModel?.currentPage = 0
                 interactor?.searchAnime(viewModel?.currentPage ?? 0, viewModel?.perPage ?? 0, searchTerm: viewModel?.searchTerm ?? "")
             }
         }
@@ -77,6 +75,17 @@ extension MainVC  {
             animeTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             animeTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             animeTableView.bottomAnchor.constraint(equalTo: margin.bottomAnchor)
+        ])
+    }
+    
+    func errorMessageSetUp () {
+        // MARK: - Error Message 
+        view.addSubview(errorLabel)
+        
+        NSLayoutConstraint.activate([
+            errorLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            errorLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+//            errorLabel.widthAnchor.constraint(equalToConstant: 250),
         ])
     }
 }
