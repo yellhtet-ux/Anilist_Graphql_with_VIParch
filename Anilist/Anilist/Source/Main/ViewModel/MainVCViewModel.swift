@@ -9,9 +9,10 @@ import Foundation
 
 struct MainVCViewModel {
     var media : [Media] = []
-    var metaData: PageInfo?
+    var totalPages : Int = 0
     var errorMessage: String = ""
     var searchTerm: String = ""
     var currentPage: Int = 0
     var perPage: Int = 10
+    var isLoading: Bool = true
 }

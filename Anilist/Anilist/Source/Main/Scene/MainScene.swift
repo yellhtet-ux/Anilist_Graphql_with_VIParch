@@ -22,7 +22,7 @@ class MainScene {
         interactor.worker = worker
         
         worker.delegate = interactor
-        worker.networkService = GNetworkService.shared
+        worker.networkService = GRXNetworkService.shared
         
         presenter.viewController = viewController
         

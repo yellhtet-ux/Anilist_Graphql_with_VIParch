@@ -9,7 +9,7 @@ import UIKit
 
 extension MainVC : UITableViewDelegate {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if let lastItem = viewModel?.media.count, let hasNextPage = viewModel?.metaData?.hasNextPage {
+        if let lastItem = viewModel?.media.count, let isLoading = viewModel?.isLoading {
             if indexPath.row == lastItem - 1  {
                 self.paginationSetUp()
             }
