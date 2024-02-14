@@ -14,6 +14,7 @@ class MainScene {
         let presenter = MainVCPresenter()
         let worker = MainVCAnimeSearchingWorker()
         let viewModel = MainVCViewModel()
+        let pagination = Pagination(page: 1, limit: 10)
         
         viewController.interactor = interactor
         viewController.viewModel = viewModel
@@ -25,6 +26,7 @@ class MainScene {
         worker.networkService = GRXNetworkService.shared
         
         presenter.viewController = viewController
+        presenter.pagination = pagination
         
         return viewController
     }

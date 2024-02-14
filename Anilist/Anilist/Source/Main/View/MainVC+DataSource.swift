@@ -8,6 +8,7 @@
 import UIKit
 
 extension MainVC : UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.viewModel?.media.count  ?? 0
     }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E3BAC4E2B74D8E2001DFAB5 /* NewRelic in Frameworks */ = {isa = PBXBuildFile; productRef = 7E3BAC4D2B74D8E2001DFAB5 /* NewRelic */; };
 		7E49C7392B67F858002B9F14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E49C7382B67F858002B9F14 /* AppDelegate.swift */; };
 		7E49C73B2B67F858002B9F14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E49C73A2B67F858002B9F14 /* SceneDelegate.swift */; };
 		7E49C7422B67F85A002B9F14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E49C7412B67F85A002B9F14 /* Assets.xcassets */; };
@@ -46,11 +47,13 @@
 		7E6436532B693AC5007DBAE7 /* ApolloAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 7E6436522B693AC5007DBAE7 /* ApolloAPI */; };
 		7E6436552B693AC5007DBAE7 /* ApolloSQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 7E6436542B693AC5007DBAE7 /* ApolloSQLite */; };
 		7E6436572B693AC5007DBAE7 /* ApolloTestSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 7E6436562B693AC5007DBAE7 /* ApolloTestSupport */; };
+		7E802B7B2B7CA7C800A2E1F5 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E802B7A2B7CA7C800A2E1F5 /* Pagination.swift */; };
 		7EB174812B7129950075C735 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 7EB174802B7129950075C735 /* RxBlocking */; };
 		7EB174832B7129950075C735 /* RxBlocking-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 7EB174822B7129950075C735 /* RxBlocking-Dynamic */; };
 		7EB174852B7129950075C735 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 7EB174842B7129950075C735 /* RxCocoa */; };
 		7EB174872B7129950075C735 /* RxCocoa-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 7EB174862B7129950075C735 /* RxCocoa-Dynamic */; };
 		7EB174892B7129950075C735 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 7EB174882B7129950075C735 /* RxRelay */; };
+		7EBC1F7F2B7320CA009AE689 /* MainVC+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBC1F7E2B7320CA009AE689 /* MainVC+State.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +84,8 @@
 		7E6436412B68AA93007DBAE7 /* AnimeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeTableViewCell.swift; sourceTree = "<group>"; };
 		7E6436422B68AA93007DBAE7 /* AnimeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimeTableViewCell.xib; sourceTree = "<group>"; };
 		7E6436482B68CF3D007DBAE7 /* CommonNibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonNibView.swift; sourceTree = "<group>"; };
+		7E802B7A2B7CA7C800A2E1F5 /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
+		7EBC1F7E2B7320CA009AE689 /* MainVC+State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVC+State.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +110,7 @@
 				7E49C75D2B67FA1B002B9F14 /* SDWebImage in Frameworks */,
 				7E49C7642B67FA62002B9F14 /* Apollo-Dynamic in Frameworks */,
 				7E49C7662B67FA62002B9F14 /* ApolloAPI in Frameworks */,
+				7E3BAC4E2B74D8E2001DFAB5 /* NewRelic in Frameworks */,
 				7E6436512B693AC5007DBAE7 /* Apollo-Dynamic in Frameworks */,
 				7E49C7682B67FA62002B9F14 /* ApolloSQLite in Frameworks */,
 			);
@@ -133,6 +139,7 @@
 		7E49C7372B67F858002B9F14 /* Anilist */ = {
 			isa = PBXGroup;
 			children = (
+				7E802B792B7CA7BA00A2E1F5 /* Utilities */,
 				7E64363F2B68AA32007DBAE7 /* Reusable Components */,
 				7E49C78E2B6807E3002B9F14 /* Model */,
 				7E49C76C2B67FD8C002B9F14 /* graphql */,
@@ -201,6 +208,7 @@
 				7E6436392B68A79E007DBAE7 /* MainVC+DataSource.swift */,
 				7E64363B2B68A7AB007DBAE7 /* MainVC+Delegate.swift */,
 				7E64363D2B68A81E007DBAE7 /* MainVC+UISetupPhase.swift */,
+				7EBC1F7E2B7320CA009AE689 /* MainVC+State.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -306,6 +314,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7E802B792B7CA7BA00A2E1F5 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				7E802B7A2B7CA7C800A2E1F5 /* Pagination.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -316,6 +332,7 @@
 				7E49C7312B67F858002B9F14 /* Sources */,
 				7E49C7322B67F858002B9F14 /* Frameworks */,
 				7E49C7332B67F858002B9F14 /* Resources */,
+				7E3BAC4F2B74D9F3001DFAB5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -342,6 +359,7 @@
 				7EB174842B7129950075C735 /* RxCocoa */,
 				7EB174862B7129950075C735 /* RxCocoa-Dynamic */,
 				7EB174882B7129950075C735 /* RxRelay */,
+				7E3BAC4D2B74D8E2001DFAB5 /* NewRelic */,
 			);
 			productName = Anilist;
 			productReference = 7E49C7352B67F858002B9F14 /* Anilist.app */;
@@ -376,6 +394,7 @@
 				7E49C7602B67FA62002B9F14 /* XCRemoteSwiftPackageReference "apollo-ios" */,
 				7E64364B2B693A52007DBAE7 /* XCLocalSwiftPackageReference "AnilistAPI" */,
 				7EB1747F2B7129950075C735 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				7E3BAC4C2B74D8E2001DFAB5 /* XCRemoteSwiftPackageReference "newrelic-ios-agent-spm" */,
 			);
 			productRefGroup = 7E49C7362B67F858002B9F14 /* Products */;
 			projectDirPath = "";
@@ -401,6 +420,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7E3BAC4F2B74D9F3001DFAB5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n#import <NewRelic/NewRelic.h>\n\nSCRIPT=`/usr/bin/find \"${SRCROOT}\" -name newrelic_postbuild.sh | head -n 1`\nif [ -z \"${SCRIPT}\"]; then\nARTIFACT_DIR=\"${BUILD_DIR%Build/*}SourcePackages/artifacts\"\nSCRIPT=`/usr/bin/find \"${ARTIFACT_DIR}\" -name newrelic_postbuild.sh | head -n 1`\nfi\n/bin/sh \"${SCRIPT}\" \"AA88e2123c064f3da0e81c6dae23866dff3cfda1c3-NRMA\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7E49C7312B67F858002B9F14 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -413,8 +452,10 @@
 				7E49C7872B680469002B9F14 /* MainVCInteractor.swift in Sources */,
 				7E49C75A2B67F98C002B9F14 /* MainScene.swift in Sources */,
 				7E49C7752B67FE69002B9F14 /* GNetworkService.swift in Sources */,
+				7E802B7B2B7CA7C800A2E1F5 /* Pagination.swift in Sources */,
 				7E64363A2B68A79E007DBAE7 /* MainVC+DataSource.swift in Sources */,
 				7E64363E2B68A81E007DBAE7 /* MainVC+UISetupPhase.swift in Sources */,
+				7EBC1F7F2B7320CA009AE689 /* MainVC+State.swift in Sources */,
 				7E49C7832B68041F002B9F14 /* MainVC+Presenting.swift in Sources */,
 				7E64363C2B68A7AB007DBAE7 /* MainVC+Delegate.swift in Sources */,
 				7E49C7892B680482002B9F14 /* MainVCPresenter.swift in Sources */,
@@ -569,6 +610,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Anilist/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -595,6 +637,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Anilist/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -645,6 +688,14 @@
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		7E3BAC4C2B74D8E2001DFAB5 /* XCRemoteSwiftPackageReference "newrelic-ios-agent-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/newrelic/newrelic-ios-agent-spm";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.4.8;
+			};
+		};
 		7E49C75B2B67FA1B002B9F14 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
@@ -672,6 +723,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7E3BAC4D2B74D8E2001DFAB5 /* NewRelic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E3BAC4C2B74D8E2001DFAB5 /* XCRemoteSwiftPackageReference "newrelic-ios-agent-spm" */;
+			productName = NewRelic;
+		};
 		7E49C75C2B67FA1B002B9F14 /* SDWebImage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7E49C75B2B67FA1B002B9F14 /* XCRemoteSwiftPackageReference "SDWebImage" */;
