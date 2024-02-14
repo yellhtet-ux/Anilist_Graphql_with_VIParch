@@ -51,36 +51,11 @@ class MainVC: UIViewController {
     
     var interactor: MainVCInteracting?
     var router: MainVCRouting? 
-    var viewModel: MainVCViewModel?
+    var viewModel: MainVCViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureHierarchy()
-    }
-}
-
-extension MainVC : MainVCControlling {
-    func render(_ state: State) {
-        switch state {
-        case let .getSearchAnimeData(animeData):
-            guard let media = animeData.media else {return}
-            guard let metaData = animeData.Page else {return}
-            if media.isEmpty {
-                self.errorLabel.isHidden = false
-                self.errorLabel.text = "There's no Data for your Keywords"
-                self.animeTableView.isHidden = true
-            }else {
-                self.viewModel?.media.append(contentsOf: media)
-                self.viewModel?.totalPages = metaData.total ?? 0
-                self.animeTableView.isHidden = false
-                self.errorLabel.isHidden = true
-                self.animeTableView.reloadData()
-            }
-        case let .getSearchAnimeError(resultError):
-            self.viewModel?.errorMessage = resultError
-            self.errorLabel.text = viewModel?.errorMessage
-            animeTableView.isHidden = true 
-        }
     }
 }
 
@@ -90,12 +65,32 @@ extension MainVC {
     }
     
     @objc func didSearchButtonGotPressed () {
-        viewModel?.searchTerm = searchTextField.text ?? ""
-        interactor?.searchAnime(viewModel?.currentPage ?? 0, viewModel?.perPage ?? 0, searchTerm: viewModel?.searchTerm ?? "")
+        viewModel.searchTerm = searchTextField.text ?? ""
+        interactor?.searchAnime(1, 10, searchTerm: viewModel.searchTerm)
     } 
+}
+
+extension MainVC : MainVCControlling {
     
-    enum State {
-        case getSearchAnimeData(AnimeSearchResultModel)
-        case getSearchAnimeError(String)
+    func render(_ state: State) {
+        switch state {
+        case .getSearchAnimeData(let animeSearchResultModel,let isInitial):
+            reload(animeSearchResultModel.media ?? [], isInitial)
+        case .getSearchAnimeError(let errString):
+            showError(errString)
+        }
+    }
+    
+    func reload (_ data: [Media],_ isInitial: Bool) {
+        viewModel.isLoading = true
+        viewModel.media.append(contentsOf: data.map{$0})
+        self.animeTableView.reloadData()
+    }
+    
+    func showError (_ errStr: String ) {
+        let alert = UIAlertController(title: "Alert", message: errStr, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .cancel)
+        alert.addAction(action)
+        self.navigationController?.pushViewController(alert, animated: true)
     }
 }

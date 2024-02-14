@@ -12,4 +12,5 @@ protocol MainVCInteracting {
     var worker: AnimeSearchingWorking? {get set}
     
     func searchAnime(_ page: Int,_ perPage: Int, searchTerm: String) 
+    func loadMore(_ searchTerm: String)
 }

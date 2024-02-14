@@ -8,11 +8,12 @@
 import UIKit   
 
 extension MainVC : UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if let lastItem = viewModel?.media.count, let isLoading = viewModel?.isLoading {
-            if indexPath.row == lastItem - 1  {
-                self.paginationSetUp()
-            }
+        guard indexPath.row == viewModel.media.count - 1 else {return}
+        if viewModel.isLoading {
+            interactor?.loadMore(viewModel.searchTerm)
+            viewModel.isLoading = false
         }
     }
 }

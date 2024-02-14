@@ -10,12 +10,16 @@ import Foundation
 class MainVCPresenter: MainVCPresenting {
     
     var viewController: MainVCControlling?
+    var pagination : Pagination!
     
     func present(_ animeData: AnimeSearchResultModel) {
-        if let media = animeData.media {
-            viewController?.viewModel?.media = media
-        }
-        viewController?.render(.getSearchAnimeData(animeData))
+        let currentPage = pagination.page
+        let isInitial = currentPage == 1
+        
+        pagination.page += 1
+        pagination.received(animeData.media?.count ?? 0)
+        viewController?.render(.getSearchAnimeData(animeData, isInitial))
+        
     }
     
     func presentError(_ error: GAPIError) {
